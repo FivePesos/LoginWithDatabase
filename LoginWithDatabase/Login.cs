@@ -69,7 +69,10 @@ namespace LoginWithDatabase
 
             if(count > 0)
             {
-                MessageBox.Show("Login Successfully!");
+                Accounts acc = new Accounts();
+                acc.Owner = this;
+                this.Hide();
+                acc.ShowDialog();
                 conn.Close();
             }
             else
